@@ -23,4 +23,13 @@
 npm i html-webpack-plugin
 
 #install babel-preset-react in development 
-npm i babel-presert-react --only=dev
+npm i --save-dev babel-presert-react 
+
+
+#Mount
+
+#Component Props and propstype
+
+
+#fetch, window.fetch polyfill  and .env
+install .env package 

@@ -338,15 +338,51 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./app.js":
-/*!****************!*\
-  !*** ./app.js ***!
-  \****************/
+/***/ "./components/app.js":
+/*!***************************!*\
+  !*** ./components/app.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _social = __webpack_require__(/*! ./static/images/social.jpg */ \"./static/images/social.jpg\");\n\nvar _social2 = _interopRequireDefault(_social);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(\n            'h1',\n            null,\n            'Hello worlds functional component!'\n        ),\n        _react2.default.createElement('img', { src: _social2.default })\n    );\n};\n\nexports.default = App;\n\n//# sourceURL=webpack:///./app.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _header = __webpack_require__(/*! ./header.js */ \"./components/header.js\");\n\nvar _header2 = _interopRequireDefault(_header);\n\nvar _recipeList = __webpack_require__(/*! ./recipeList.js */ \"./components/recipeList.js\");\n\nvar _recipeList2 = _interopRequireDefault(_recipeList);\n\nvar _reipeDetal = __webpack_require__(/*! ./reipeDetal.js */ \"./components/reipeDetal.js\");\n\nvar _reipeDetal2 = _interopRequireDefault(_reipeDetal);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfetch(\"http://reactrecipes.herokuapp.com/v1/recipes';\" + '/v1/recipes').then(function (res) {\n    return res.json();\n}).then(function (json) {\n    return console.log(json);\n});\n\nvar App = function App() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(_header2.default, null),\n        _react2.default.createElement(\n            'main',\n            { style: { display: 'flex' } },\n            _react2.default.createElement(_recipeList2.default, { style: { flex: 3 } }),\n            _react2.default.createElement(_reipeDetal2.default, { style: { flex: 5 } })\n        )\n    );\n};\n\nexports.default = App;\n\n//# sourceURL=webpack:///./components/app.js?");
+
+/***/ }),
+
+/***/ "./components/header.js":
+/*!******************************!*\
+  !*** ./components/header.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Header = function Header() {\n    return _react2.default.createElement(\n        'header',\n        null,\n        _react2.default.createElement(\n            'h1',\n            null,\n            ' My Receipt '\n        )\n    );\n};\n\nexports.default = Header;\n\n//# sourceURL=webpack:///./components/header.js?");
+
+/***/ }),
+
+/***/ "./components/recipeList.js":
+/*!**********************************!*\
+  !*** ./components/recipeList.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar RecipeList = function RecipeList(props) {\n    return _react2.default.createElement(\n        'div',\n        { style: props.style },\n        _react2.default.createElement(\n            'h1',\n            null,\n            ' Recipes List'\n        ),\n        _react2.default.createElement(\n            'ul',\n            null,\n            _react2.default.createElement(\n                'li',\n                null,\n                _react2.default.createElement(\n                    'span',\n                    null,\n                    'Creepy Halloween Skull Cupcakes'\n                ),\n                _react2.default.createElement(\n                    'span',\n                    null,\n                    'Desert'\n                )\n            ),\n            _react2.default.createElement(\n                'li',\n                null,\n                _react2.default.createElement(\n                    'span',\n                    null,\n                    'Blueberry Sour  Cream Coffee Cakes'\n                ),\n                _react2.default.createElement(\n                    'span',\n                    null,\n                    'Desert'\n                )\n            ),\n            _react2.default.createElement(\n                'li',\n                null,\n                _react2.default.createElement(\n                    'span',\n                    null,\n                    'Amazing Pork Tenderloin in the Slow  Cooker'\n                ),\n                _react2.default.createElement(\n                    'span',\n                    null,\n                    'Meat'\n                )\n            )\n        )\n    );\n};\n\nexports.default = RecipeList;\n\n//# sourceURL=webpack:///./components/recipeList.js?");
+
+/***/ }),
+
+/***/ "./components/reipeDetal.js":
+/*!**********************************!*\
+  !*** ./components/reipeDetal.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar ReipeDetail = function ReipeDetail(props) {\n    return _react2.default.createElement(\n        \"div\",\n        { style: props.style },\n        _react2.default.createElement(\n            \"h2\",\n            null,\n            \" Creepy Halloween Skull Cupcakes \"\n        ),\n        _react2.default.createElement(\"img\", { src: \"https://s3.amazonaws.com/cdn.sl.disneysprings.com/wp-content/uploads/2015/09/21150954/cookesofdublin_detail_02.jpg\", alt: \"\" }),\n        _react2.default.createElement(\n            \"div\",\n            null,\n            _react2.default.createElement(\n                \"span\",\n                null,\n                \"Dessert\"\n            ),\n            _react2.default.createElement(\n                \"span\",\n                null,\n                \"1200 cal\"\n            )\n        ),\n        _react2.default.createElement(\n            \"h3\",\n            null,\n            \"Ingredients\"\n        ),\n        _react2.default.createElement(\n            \"ul\",\n            null,\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"1 package devil's food cake mix\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"1 Cup of water\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"3 eggs\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"1/3 cup vegetable oil\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"1 1/2 packages ptepared vanilla frosting\"\n            )\n        ),\n        _react2.default.createElement(\n            \"h3\",\n            null,\n            \"Steps\"\n        ),\n        _react2.default.createElement(\n            \"ol\",\n            null,\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"Preheat oven to 350 degress F (175 degrees C)\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"Combine cake mix, water, eggs, and oil in a large bowl\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"Combine cake mix, water, eggs, and oil in a large bowl\"\n            ),\n            _react2.default.createElement(\n                \"li\",\n                null,\n                \"Combine cake mix, water, eggs, and oil in a large bowl\"\n            )\n        )\n    );\n};\n\nexports.default = ReipeDetail;\n\n//# sourceURL=webpack:///./components/reipeDetal.js?");
 
 /***/ }),
 
@@ -358,18 +394,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"../node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _app = __webpack_require__(/*! ./app */ \"./app.js\");\n\nvar _app2 = _interopRequireDefault(_app);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar MOUNT_ELEMENT = document.getElementById('root');\n\n_reactDom2.default.render(_react2.default.createElement(_app2.default, null), MOUNT_ELEMENT);\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./static/images/social.jpg":
-/*!**********************************!*\
-  !*** ./static/images/social.jpg ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"75bfbabc08d726b62365e9a7808bb68f.jpg\";\n\n//# sourceURL=webpack:///./static/images/social.jpg?");
+eval("\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"../node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _app = __webpack_require__(/*! ./components/app */ \"./components/app.js\");\n\nvar _app2 = _interopRequireDefault(_app);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar MOUNT_ELEMENT = document.getElementById('root');\n\n_reactDom2.default.render(_react2.default.createElement(_app2.default, null), MOUNT_ELEMENT);\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
