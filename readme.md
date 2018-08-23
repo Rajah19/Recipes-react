@@ -21,3 +21,6 @@
 
 #HtmlWebpackPlugin
 npm i html-webpack-plugin
+
+#install babel-preset-react in development 
+npm i babel-presert-react --only=dev
