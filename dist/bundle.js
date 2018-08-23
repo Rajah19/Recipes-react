@@ -346,7 +346,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n        value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n        return _react2.default.createElement(\n                'h1',\n                null,\n                'Hello worlds!'\n        );\n};\n\nexports.default = App;\n\n//# sourceURL=webpack:///./app.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _social = __webpack_require__(/*! ./static/images/social.jpg */ \"./static/images/social.jpg\");\n\nvar _social2 = _interopRequireDefault(_social);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(\n            'h1',\n            null,\n            'Hello worlds functional component!'\n        ),\n        _react2.default.createElement('img', { src: _social2.default })\n    );\n};\n\nexports.default = App;\n\n//# sourceURL=webpack:///./app.js?");
 
 /***/ }),
 
@@ -359,6 +359,17 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n        value: true\
 
 "use strict";
 eval("\n\nvar _react = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"../node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _app = __webpack_require__(/*! ./app */ \"./app.js\");\n\nvar _app2 = _interopRequireDefault(_app);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar MOUNT_ELEMENT = document.getElementById('root');\n\n_reactDom2.default.render(_react2.default.createElement(_app2.default, null), MOUNT_ELEMENT);\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./static/images/social.jpg":
+/*!**********************************!*\
+  !*** ./static/images/social.jpg ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"75bfbabc08d726b62365e9a7808bb68f.jpg\";\n\n//# sourceURL=webpack:///./static/images/social.jpg?");
 
 /***/ })
 
