@@ -33,3 +33,6 @@ npm i --save-dev babel-presert-react
 
 #fetch, window.fetch polyfill  and .env
 install .env package 
+
+#styles
+postcss and basscss
