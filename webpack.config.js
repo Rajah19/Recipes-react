@@ -20,8 +20,12 @@ module.exports = {
              loader: 'babel-loader'
           },
           {
-              test: /\.css/,
+              test: /\.css$/,
               loader: ['style-loader', 'css-loader', 'postcss-loader']
+          },
+          {
+                test:/\.scss$/,
+                loader:['style-loader','css-loader','sass-loader', 'postcss-loader']
           },
           {
               test: /\.(png|jpeg|jpg)$/,

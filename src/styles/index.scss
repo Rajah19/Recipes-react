@@ -1,0 +1,25 @@
+@import 'basscss';
+@import "basscss-colors";
+@import "basscss-background-colors";
+
+
+:root{
+
+}
+
+*{
+    background-color: aquamarine;
+}
+
+
+ul{
+    li{
+        color:yellow;
+
+        &:hover{
+            color:red;
+        }
+    }
+}
+
+
