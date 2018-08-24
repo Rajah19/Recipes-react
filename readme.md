@@ -37,3 +37,9 @@ install .env package
 #styles
 postcss and basscss
 
+
+#dynamic site
+State API
+Initializing the state
+Accessing the state
+Editing the state
