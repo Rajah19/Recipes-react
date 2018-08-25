@@ -1,26 +1,37 @@
 @import 'basscss';
 @import "basscss-colors";
 @import "basscss-background-colors";
+@import "./font.scss";
+@import "./border.scss";
+@import "./general.scss";
 
 
 :root{
-
+    --black: #222;
+    --h1: 70px;
+    --h2: 50px;
+    --lime: #cdebdb;
 }
 
 *{
-    background-color: aquamarine;
+    marign:0px;
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;
 }
 
+body{
 
-ul{
-    li{
-        color:yellow;
-        list-style:none;
+    background-color:var(--lime);
 
-        &:hover{
-            color:red;
-        }
+    h1,h2, h3, h4, h5, h6 {
+        margin: 0.4em 0px;
+        font-family: 'Oswald', sans-serif;
     }
+
+    .logo{
+        color:var(--white);
+    }
+
 }
 
 

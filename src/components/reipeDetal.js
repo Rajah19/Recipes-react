@@ -1,10 +1,14 @@
 import React from 'react';
+import classNames from 'classnames';
 
 const ReipeDetail = (props) => {
 
     if (!props.recipe) {
         return (
-            <p>
+            <p
+                style={props.style}
+                className={classNames('h3 p2 bg-white italic center', props.className)}
+            >
                 Please choose recipe
             </p>
         );
@@ -12,9 +16,12 @@ const ReipeDetail = (props) => {
 
     return (
 
-        <div style={props.style}>
-            <h2> {props.recipe.name} </h2>
-            <img src={props.recipe.image} alt=""/>
+        <div
+            style={props.style}
+            className={classNames('p2 bg-white',props.className)}
+        >
+            <h2 className="h2"> {props.recipe.name} </h2>
+            <img className="fit" src={props.recipe.image} alt=""/>
 
             <div>
                 <span>{props.recipe.category}</span>
