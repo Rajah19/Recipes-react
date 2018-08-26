@@ -6,6 +6,3 @@ import './styles/index.scss';
 const MOUNT_ELEMENT = document.getElementById('root');
 
 ReactDOM.render(<App />, MOUNT_ELEMENT);
-
-
-

@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const ReipeDetail = (props) => {
+const RecipeDetail = (props) => {
 
     if (!props.recipe) {
         return (
@@ -18,10 +19,12 @@ const ReipeDetail = (props) => {
 
         <div
             style={props.style}
-            className={classNames('p2 bg-white',props.className)}
+            className={classNames('p2 bg-white', props.className)}
         >
-            <h2 className="h2"> {props.recipe.name} </h2>
-            <img className="fit" src={props.recipe.image} alt=""/>
+            <h2 className="h2">
+            {props.recipe.name}
+            </h2>
+            <img className="fit" src={props.recipe.image} alt={props.recipe.name} />
 
             <div>
                 <span>{props.recipe.category}</span>
@@ -50,5 +53,10 @@ const ReipeDetail = (props) => {
     );
 };
 
+RecipeDetail.propTypes = {
+    recipe: PropTypes.object,
+    className: PropTypes.string,
+    style: PropTypes.object,
+};
 
-export default ReipeDetail;
+export default RecipeDetail;
