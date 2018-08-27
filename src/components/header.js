@@ -4,7 +4,7 @@ const Header = () => (
   <header className="px4">
     <h1 className="h1">
       <span className="logo">🍽</span>
-      My Receipt
+      My Receipt Two
     </h1>
   </header>
 );

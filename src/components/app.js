@@ -1,65 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './header';
-import RecipeList from './recipeList';
-import RecipeDetail from './reipeDetal';
+import Home from './home';
+import Favorites from './favorites';
+import Contact from './contact';
+import NotFound from './notFound';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      recipes: [],
-      currentRecipe: null,
-      error: null,
-    };
-    // this.onRecipeClick = this.onRecipeClick.bind(this);
-  }
-
-  componentDidMount() {
-    try {
-      fetch(`${API_URL}/v1/recipes`)
-        .then(res => res.json())
-        .then(recipes => {
-          this.setState({ recipes });
-        });
-    } catch (error) {
-      this.setState({ error });
-    }
-  }
-
-  onRecipeClick = id => {
-    try {
-      fetch(`${API_URL}/v1/recipes/${id}`)
-        .then(res => res.json())
-        .then(currentRecipe => {
-          this.setState({ currentRecipe });
-        });
-    } catch (error) {
-      this.setState({ error });
-    }
-  };
-
-  render() {
-    const { recipes, currentRecipe } = this.state;
-
-    return (
-      <div>
-        <Header />
-        <main className="px4 flex">
-          <RecipeList
-            recipes={recipes}
-            style={{ flex: 3 }}
-            onClick={this.onRecipeClick}
-          />
-          <RecipeDetail
-            className="ml4"
-            recipe={currentRecipe}
-            style={{ flex: 5 }}
-          />
-        </main>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <main>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/favorites" component={Favorites} />
+        <Route path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
+    </main>
+  </BrowserRouter>
+);
 
 export default App;

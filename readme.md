@@ -45,4 +45,4 @@ Accessing the state
 Editing the state
 
 
-#Linter 
+#Linter and husky
