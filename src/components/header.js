@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const HeaderLink = ({ children, ...props }) => (
-  <NavLink  
+  <NavLink
         exact
-        activeClassName="bg-white" 
-        className="p1 mx2 black text-decoration-none round" 
+        activeClassName="bg-white"
+        className="p1 mx2 black rounded text-decoration-none"
         {...props}
   >
         {children}
@@ -16,7 +16,7 @@ const HeaderLink = ({ children, ...props }) => (
 const Header = () => (
   <header className="flex items-center justify-between px4">
     <h1 className="h1">
-      <span className="logo">🍽</span>
+      <span className="logo">❇</span>
       My Receipt
     </h1>
     <nav>
@@ -29,6 +29,6 @@ const Header = () => (
 
 HeaderLink.propTypes = {
   children: PropTypes.node,
-}
+};
 
 export default Header;
